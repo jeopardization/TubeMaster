@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="247.0" prefWidth="690.0"
+            style="-fx-background-color: #34343c;" xmlns="http://javafx.com/javafx/10.0.1"
+            fx:controller="xertxa.tubemaster.bot.Controller">
+    <children>
+        <TextField fx:id="accountListPath" layoutX="114.0" layoutY="10.0" prefHeight="25.0" prefWidth="266.0"/>
+        <Button layoutX="387.0" layoutY="10.0" mnemonicParsing="false" onAction="#setAccountList" text="Choose File"/>
+        <Label layoutX="14.0" layoutY="10.0" text="Account List" textFill="WHITE">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="proxyListPath" disable="true" layoutX="114.0" layoutY="46.0" prefHeight="25.0"
+                   prefWidth="266.0"/>
+        <Button disable="true" layoutX="387.0" layoutY="46.0" mnemonicParsing="false" onAction="#setProxyList"
+                text="Choose File"/>
+        <Label disable="true" layoutX="14.0" layoutY="46.0" text="Proxy List" textFill="WHITE">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Label>
+        <TextArea fx:id="logs" editable="false" layoutX="476.0" layoutY="34.0" prefHeight="201.0" prefWidth="200.0"/>
+        <Label layoutX="476.0" layoutY="5.0" text="Logs" textFill="WHITE">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Label>
+        <Label layoutX="14.0" layoutY="82.0" prefHeight="25.0" prefWidth="60.0" text="Amount" textFill="WHITE">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="amount" accessibleRole="INCREMENT_BUTTON" layoutX="114.0" layoutY="82.0" prefHeight="25.0"
+                   prefWidth="350.0"/>
+        <RadioButton layoutX="114.0" layoutY="159.0" mnemonicParsing="false" text="Video Bot" textFill="WHITE">
+            <toggleGroup>
+                <ToggleGroup fx:id="selectedModule"/>
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton layoutX="213.0" layoutY="159.0" mnemonicParsing="false" text="Channel Bot" textFill="WHITE"
+                     toggleGroup="$selectedModule"/>
+        <Label layoutX="14.0" layoutY="155.0" prefHeight="25.0" prefWidth="87.0" text="Module" textFill="WHITE">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Label>
+        <Button layoutX="14.0" layoutY="192.0" mnemonicParsing="false" onAction="#launch" prefHeight="42.0"
+                prefWidth="451.0" text="Launch"/>
+        <Label layoutX="14.0" layoutY="118.0" prefHeight="25.0" prefWidth="60.0" text="Threads" textFill="WHITE">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="threadAmount" accessibleRole="INCREMENT_BUTTON" disable="true" layoutX="115.0" layoutY="118.0"
+                   prefHeight="25.0" prefWidth="350.0" text="1"/>
+    </children>
+</AnchorPane>

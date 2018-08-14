@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="340.0" prefWidth="702.0" style="-fx-background-color: #222126;"
+            xmlns="http://javafx.com/javafx/10.0.1" fx:controller="xertxa.tubemaster.bot.Controller">
+    <children>
+        <Text fill="WHITE" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="TubeMaster 1.0">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Text>
+        <Button layoutX="661.0" layoutY="9.0" mnemonicParsing="false" onAction="#exit" prefHeight="24.0"
+                prefWidth="22.0" style="-fx-background-color: RGBA(0,0,0,0);">
+            <graphic>
+                <ImageView>
+                    <image>
+                        <Image url="@resources/exit.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <AnchorPane layoutX="5.0" layoutY="42.0" prefHeight="34.0" prefWidth="692.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#handleShowView" prefHeight="45.0" prefWidth="173.0"
+                        style="-fx-background-color: linear-gradient(#2e2c36, #222126); -fx-background-radius: 0; -fx-border-width: 0 1 0 0; -fx-border-color: #222126;"
+                        text="Dashboard" textFill="WHITE" userData="tabs/dashboard.fxml">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                </Button>
+                <Button layoutX="173.0" mnemonicParsing="false" onAction="#handleShowView" prefHeight="45.0"
+                        prefWidth="173.0"
+                        style="-fx-background-color: linear-gradient(#2e2c36, #222126); -fx-background-radius: 0;"
+                        text="Video Bot" textFill="WHITE" userData="tabs/videobot.fxml">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                </Button>
+                <Button layoutX="346.0" mnemonicParsing="false" onAction="#handleShowView" prefHeight="45.0"
+                        prefWidth="173.0"
+                        style="-fx-background-color: linear-gradient(#2e2c36, #222126); -fx-background-radius: 0; -fx-border-width: 0 0 0 1; -fx-border-color: #222126;"
+                        text="Channel Bot" textFill="WHITE" userData="tabs/channelbot.fxml">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                </Button>
+                <Button layoutX="519.0" mnemonicParsing="false" onAction="#handleShowView" prefHeight="45.0"
+                        prefWidth="173.0"
+                        style="-fx-background-color: linear-gradient(#2e2c36, #222126); -fx-background-radius: 0; -fx-border-width: 0 0 0 1; -fx-border-color: #222126;"
+                        text="About" textFill="WHITE" userData="tabs/about.fxml">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+        <BorderPane fx:id="main" layoutX="5.0" layoutY="88.0" prefHeight="247.0" prefWidth="692.0"
+                    style="-fx-background-color: #34343c;">
+            <center>
+                <fx:include source="dashboard.fxml"/>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

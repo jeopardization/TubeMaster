@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="247.0" prefWidth="690.0"
+            style="-fx-background-color: #34343c;" xmlns="http://javafx.com/javafx/10.0.1"
+            fx:controller="xertxa.tubemaster.bot.Controller">
+    <children>
+        <Label layoutX="15.0" layoutY="10.0" prefHeight="50.0" prefWidth="662.0"
+               text="TubeMaster is a bot designed to automate the inflation of artificial YouTube stats. It is capable of liking/disliking videos and subscribing to channels using multiple accounts."
+               textFill="WHITE" wrapText="true">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Label>
+        <Hyperlink layoutX="9.0" layoutY="72.0" onAction="#openGitHubPage" text="GitHub">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Hyperlink>
+        <Hyperlink layoutX="9.0" layoutY="104.0" onAction="#openDevPage" prefHeight="33.0" prefWidth="88.0"
+                   text="Developer">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Hyperlink>
+    </children>
+</AnchorPane>

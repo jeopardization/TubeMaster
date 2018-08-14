@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="247.0" prefWidth="690.0"
+            style="-fx-background-color: #34343c;" xmlns="http://javafx.com/javafx/10.0.1"
+            fx:controller="xertxa.tubemaster.bot.Controller">
+    <children>
+        <Label layoutX="14.0" layoutY="10.0" text="Channel" textFill="WHITE">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="channelID" layoutX="115.0" layoutY="10.0" prefHeight="25.0" prefWidth="377.0"/>
+        <Label layoutX="14.0" layoutY="48.0" text="Action" textFill="WHITE">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Label>
+        <RadioButton layoutX="115.0" layoutY="52.0" mnemonicParsing="false" text="Subscribe" textFill="WHITE">
+            <toggleGroup>
+                <ToggleGroup fx:id="channelAction"/>
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton layoutX="215.0" layoutY="52.0" mnemonicParsing="false" text="Block" textFill="WHITE"
+                     toggleGroup="$channelAction"/>
+        <RadioButton layoutX="508.0" layoutY="14.0" mnemonicParsing="false" text="User ID" textFill="WHITE">
+            <toggleGroup>
+                <ToggleGroup fx:id="linkType"/>
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton layoutX="594.0" layoutY="14.0" mnemonicParsing="false" text="Channel ID" textFill="WHITE"
+                     toggleGroup="$linkType"/>
+        <Button layoutX="14.0" layoutY="88.0" mnemonicParsing="false" onAction="#applyChannelBot" prefHeight="42.0"
+                prefWidth="663.0" text="Apply"/>
+    </children>
+</AnchorPane>
